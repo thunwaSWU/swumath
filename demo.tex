@@ -1,0 +1,211 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% This is a sample tex file for swumath.cls
+%% Copyright (C) 2020- Thunwa Theerakarn
+%%
+%% You must have swumath.cls and Srinakharinwirot_Logo_EN_Color.png in the same folder.
+%%
+%% Options for swumath class : ma491, ma493, st472, or st474
+%%
+%% Preloaded Packages : geometry, graphicx, caption, enumitem
+%%                                     amssymb, amsmath, amsthm
+%% For basic usage, you do not need to load any other packages or redefine anything.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[ma493]{swumath}
+
+%%%%%%%%%%%%%%%%%%%%%%%
+%% Parameters
+%% Most are self-explanatory. 
+%%%%%%%%%%%%%%%%%%%%%%%
+
+%Project title
+\title{Home Life and Social Habits of British Muggles}
+
+\academicyear{2020}
+
+%Students (up to 4)
+\numberofmembers{3}
+
+\nameone{Hermione}
+\lastnameone{Granger}
+\idone{6X102010XX1}
+
+\nametwo{Harry}
+\lastnametwo{Potter}
+\idtwo{6X102010XX2}
+
+\namethree{Ron}
+\lastnamethree{Weasley}
+\idthree{6X102010XX3}
+
+%\namefour{Ron}
+%\lastnamefour{Weasley}
+%\idfour{6X102010XX3}
+
+%Do not include Ph.D. for advisor or co-advisor
+\advisor{Professor Albus Percival Wulfric Brian Dumbledore}
+%\coadvisor{YYYY}
+
+%Committee (Include Ph.D.)
+\numberofexaminers{3}
+
+%Uncomment as you need
+%\examone{Examiner 1}
+%\examtwo{Examiner 2}
+%\examthree{Examiner 3}
+%\examfour{Examiner 3}
+
+%%%%%%%%%%%%%%%%%%%%%%%
+%% Your document starts here
+%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+%%% Front Matter
+\frontmatter
+
+\maketitle
+\makeapprovalpage
+%Abstract
+\begin{abstract}
+	Cupcake ipsum dolor. Sit amet chocolate jelly tiramisu halvah croissant bear claw sugar plum. Jujubes sugar plum lemon drops pudding cake cheesecake biscuit cotton candy gummi bears. Gummi bears cake chocolate cake icing marshmallow. Apple pie cake cupcake pie halvah. Jelly cotton candy croissant jujubes. Ice cream chupa chups jujubes lollipop marzipan. Fruitcake halvah sweet.
+
+Jujubes biscuit jelly-o halvah candy croissant jelly-o liquorice. Tootsie roll donut muffin muffin toffee donut cupcake halvah. Ice cream jelly beans soufflé. Cake chocolate bar bear claw ice cream jujubes liquorice. Toffee oat cake sweet. Brownie oat cake bear claw. Cake brownie jelly beans. Marshmallow pastry fruitcake fruitcake gummies chocolate. Tiramisu soufflé macaroon gummi bears cotton candy jelly-o chocolate bar caramels. Halvah liquorice jelly icing carrot cake jelly-o lemon drops.
+\end{abstract}
+%\begin{acknowledgment}
+%	Thanks.
+%\end{acknowledgment}
+\tableofcontents
+
+%%% Main Matter
+\mainmatter
+
+\chapter{Introduction}
+Tumeric twee banh mi ex, umami blue bottle cred. Lo-fi ut deserunt thundercats. Cray slow-carb laborum asymmetrical hammock, tempor drinking vinegar migas flannel. Do cliche wayfarers, selfies affogato aesthetic authentic culpa austin single-origin coffee. Fam before they sold out est whatever iPhone cred cold-pressed, flannel polaroid gastropub nisi. Viral dreamcatcher pour-over, minim jianbing occaecat small batch butcher tumeric deep v.
+\begin{equation}
+a^2+b^2=c^2
+\end{equation}
+
+Fam pop-up hammock kombucha coloring book. Hashtag gluten-free cornhole poke craft beer hot chicken. Deep v 8-bit coloring book pinterest dreamcatcher, raw denim street art adaptogen chillwave raclette salvia fashion axe. Fashion axe pabst shoreditch DIY yuccie aesthetic. Venmo laboris squid coloring book godard pop-up banh mi artisan. Nisi fam master cleanse ethical ut celiac, truffaut officia franzen dreamcatcher neutra in bushwick chillwave.
+\begin{enumerate}
+\item interesting statement 1
+\item interesting statement 2
+\item interesting statement 3
+\end{enumerate}
+
+\chapter{Preliminaries}
+In this chapter, basic definitions and propositions are defined. In this report, all Alexandrov spaces are assumed to have a finite Hausdorff dimension.
+ 
+\section{Basic definitions} 
+First, we recall the notion of a strainer.
+\begin{definition}
+Let $X$ be an Alexandrov space of curvature bounded below by $c$. Let $p \in X$.
+An \emph{$m$-strainer at $p$ of quality $\delta$ and scale $r$} is a collection $\{(a_i, b_i)\}_{i=1}^m$ 
+of pairs of points such that $d(p,a_i) = d(p, b_i) = r$ and in terms of comparison angles,
+\begin{align}
+\tilde{\angle}_p(a_i, b_i) & > \pi - \delta, \\
+\tilde{\angle}_p(a_i, a_j) & > \frac{\pi}{2} - \delta, \notag \\
+\tilde{\angle}_p(a_i, b_j) & > \frac{\pi}{2} - \delta, \notag \\
+\tilde{\angle}_p(b_i, b_j) & > \frac{\pi}{2} - \delta, \notag 
+\end{align}
+for all $i,j \in \{1, \ldots, m\}$, $i \neq j$.
+The comparison angles are defined using comparison triangles in the model space of constant curvature $c$.
+\end{definition}
+
+\begin{definition}
+The \emph{strainer number} of $X$ is the supremum of numbers $m$ such that there exists an $m$-strainer of quality $\frac{1}{100m}$ at some point and some scale.
+\end{definition}
+ 
+\section{Basic propositions and theorems}
+In this section, we view the card game $\mathcal{SET}$ as a mathematical object. We identify all 81 cards in the pile as a vector space over a finite field. Some basic definitions and propositions are also given.
+
+\begin{proposition} Let $x_1$ and $x_2$ be distinct elements of $(\mathbb{Z}_3)^4$. There is a unique $x_3 \in (\mathbb{Z}_3)^4$ such that $x_1+ x_2+ x_3 = 0$ and $x_3$ is not equal to $x_1$ and $x_2$.
+\end{proposition}
+\begin{proof} Assume that $x_1$ and $x_2$ are distinct elements of $(\mathbb{Z}_3)^4$. Let $x_3 = -x_1-x_2$. Then $x_1+ x_2+ x_3 = x_1+ x_2+ (-x_1-x_2) = 0.$ Suppose that there is another $x \in (\mathbb{Z}_3)^4$ such that $x_1+ x_2+ x = 0$. We have $x = -x_1-x_2 = x_3$. Hence, $x_3$ is the only element such that $x_1+ x_2+ x_3$ = 0.
+
+Suppose that $x_3 = x_1$. Then $x_1 = x_3 = -x_1-x_2$, so $2x_1 = 2x_2$. Equivalently, $x_1 = x_2$ which is a contradiction. Next, suppose that $x_3 = x_2$. Then $x_2  = x_3 =-x_1-x_2$, so $2x_1= 2x_2$. Equivalently, $x_1 = x_2$ which is a contradiction. 
+ \end{proof}
+
+\chapter{Main Results}
+
+\section{Result 1}
+The following lemma is from \cite{davis}.
+\begin{lemma}
+	For $x, y \in X$, $x=(x \vartriangleright^{-1} y)\vartriangleright y$.
+\end{lemma}
+\begin{proof}
+	This can be obtain directly form the definition of quandles.
+\end{proof}
+
+\begin{theorem}
+The general solution to the differential equation 
+\begin{equation}
+\frac{dy}{dx} = \frac{x^2 + y^2}{xy}
+\end{equation}
+is $y = \pm \sqrt{2 x^2 \ln |x| + C x^2}$.
+\end{theorem}
+\begin{proof}
+This is a homogeneous first-order equation. Thus, we can solve the equation by substituting $y = xv$. By the product rule, $\dfrac{dy}{dx} = x \dfrac{dv}{dx} + v$. Substituting $\dfrac{dy}{dx} = x \dfrac{dv}{dx} + v$ and $y = xv$ into the given equation to have that
+\begin{equation}
+x \dfrac{dv}{dx} + v = \frac{x^2 + (xv)^2}{x \cdot xv} = \frac{1 + v^2}{v} = \frac{1}{v} + v.
+\end{equation}
+Hence,
+\begin{equation} x \dfrac{dv}{dx} = \frac{1}{v}. \end{equation}
+Then,
+\begin{equation} v \dfrac{dv}{dx} = \frac{1}{x}. \end{equation}
+Integrate both sides to get that
+\begin{equation} \frac{1}{2}v^2 = \int \frac{1}{x} \, dx = \ln |x| + k \end{equation}
+for some constant $k$. That is 
+\begin{equation} v^2 = 2 \ln |x| + 2k. \end{equation} 
+Substitute $v = \frac{y}{x}$ to have that
+\begin{equation} \left( \frac{y}{x} \right)^2 = 2 \ln |x| + 2k. \end{equation} 
+Hence,
+\begin{equation} y^2 = 2 x^2 \ln |x| + 2k x^2. \end{equation} 
+Therefore, the general solution of the given differential equation is  
+\[y = \pm \sqrt{2 x^2 \ln |x| + C x^2}\]
+for some constant $C$.
+\end{proof}
+
+\begin{corollary}
+The following is true.
+\end{corollary}
+
+%% Appendix (if exists)
+\appendix
+
+\chapter{Some additional facts}
+
+Let $0 < \beta_1 < \beta_2 < \beta_3$ be new parameters. 
+At scale $\mathfrak{r}_p$, we partition points in $M$ as follows:
+\begin{itemize}
+\item A point $p$ in $M$ is a \emph{3-stratum} point if $(\frac{1}{\mathfrak{r}_p} M, p)$ is $\beta_3$-close to $(\mathbb{R}^3, 0)$ in the pointed Gromov-Hausdorff topology.
+\item A point $p$ in $M$ lies in the \emph{2-stratum} if it does not lie in the 3-stratum and $(\frac{1}{\mathfrak{r}_p} M, p)$ is $\beta_2$-close to $(\mathbb{R}^2 \times Y_p, (0, Y^*_p))$ in the pointed Gromov-Hausdorff topology, where
+$Y_p$ is a point, a circle, an interval, or a half-line, and $Y^*_p$ is a basepoint in $Y_p$.
+\item A point $p$ in $M$ lies in the \emph{1-stratum} if it does not lie in the $k$-stratum for $k \in \{2,3\}$ and 
+$(\frac{1}{\mathfrak{r}_p} M, p)$ is $\beta_1$-close to $(\mathbb{R} \times Y_p, (0, Y^*_p)$ in the pointed Gromov-Hausdorff topology, where
+$Y_p$ is a 2-dimensional Alexandrov space.
+\end{itemize}
+
+Furthermore, if a point $p \in M$ is in the $k$-stratum, then 
+at some scale comparable to $\mathfrak{r}_p$, $M$ is 
+close in the pointed $C^K$-topology to $N_p \simeq \mathbb{R}^k \times F_p$ where $F_p$ is given in the following table.
+
+\begin{center}
+\begin{tabular}{|c|l|} 
+\hline
+$k$ & $F_p$ \\ \hline
+3 & $S^1$ \\ \hline
+2 & $S^2, T^2, D^2$ \\ \hline
+1 & $S^3/\Gamma$, $T^3/\Gamma$, $S^2 \times S^1$, $\mathbb{R}P^3 \# \mathbb{R}P^3$,
+$D^3, S^2 \times_{\mathbb{Z}_2} I, S^1 \times D^2, T^2 \times_{\mathbb{Z}_2} I$ \\ \hline
+\end{tabular}
+\end{center}
+
+\begin{thebibliography}{20}
+\bibitem{davis} B. Davis, D. Maclagan, The card game SET, \emph{Math. Intelligencer}, 25 no. 3 (2003), 33-40, http://dx.doi.org/10.1007/bf02984846.
+\bibitem{goldberg} T. Goldberg. Algebra From Geometry in the Card Game SET. \emph{The College Mathematics Journal}, 47 no.4 (2016), 265-273.
+\bibitem{gordon} H. Gordon, R. Gordon, E. McMahon, Hands-on SET, \emph{PRIMUS}, 23 (2013) 646-658.  
+\bibitem{lang} S. Lang, \emph{Linear Algebra Third Edition}. New haven, USA, 1987.
+\end{thebibliography}
+
+\end{document}
