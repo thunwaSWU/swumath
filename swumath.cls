@@ -350,13 +350,13 @@
 \newcommand{\@swulogo}{Srinakharinwirot_Logo_EN_Color.png}
 \newcommand{\@subjectname}{%
 \ifnum\@subject=0%
-    MA491 MATHEMATICS SEMINAR
+    MA 491 MATHEMATICS SEMINAR
     \else\fi \ifnum\@subject=1%
-    MA493 MATHEMATICS PROJECT
+    MA 493 MATHEMATICS PROJECT
     \else\fi \ifnum\@subject=2%
-    ST472 SEMINAR IN STATISTICS
+    ST 472 SEMINAR IN STATISTICS
     \else\fi  \ifnum\@subject=3%
-    ST474 STATISTICS PROJECT II
+    ST 474 STATISTICS PROJECT II
     \fi
 }
 \newcommand{\@phdtext}{, Ph.D.}

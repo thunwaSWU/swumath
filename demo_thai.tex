@@ -1,0 +1,248 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% This is a sample tex file for swumath-thai.cls
+%% Copyright (C) 2020- Thunwa Theerakarn
+%%
+%% You must have swumath.cls, swumath-thai.cls, and Srinakharinwirot_Logo_TH_Color.png in the same folder.
+%%
+%% Options for swumath class : ma491, ma493, st472, or st474
+%%
+%% Preloaded Packages : geometry, graphicx, caption, enumitem
+%%                                     amssymb, amsmath, amsthm
+%% For basic usage, you do not need to load any other packages or redefine anything.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% NOTICE
+%%
+%% This sample is for compiling on your local system.
+%% For Overleaf, use demo_thai_overleaf.tex
+%%
+%% 1. MUST COMPILE WITH XeLaTeX
+%% 2. USE UTF-8 for source
+%% 3. MUST have TH Sarabun New installed on your computer.
+%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[ma493]{swumath-thai}
+
+%%%%%%%%%%%%%%%%%%%%%%%
+% SETUP FOR THAI LANGUAGE
+%%%%%%%%%%%%%%%%%%%%%%%
+
+%% Polyglossia
+\usepackage{polyglossia}
+
+\usepackage{fontspec}
+\usepackage{xltxtra}
+\usepackage{xunicode}
+\XeTeXlinebreaklocale "th"
+\XeTeXlinebreakskip = 0pt plus 1pt 
+\usepackage{fonts-tlwg}
+\defaultfontfeatures{Mapping=tex-text} 
+
+%Comment this for Overleaf
+\newfontfamily{\thaifont}{THSarabunNew}[Scale = 1.3]
+\setmainlanguage{thai}
+
+%% Ucharclasses Package is responsible for auto-switching font based on Unicode
+\usepackage[Latin,Thai]{ucharclasses}
+\setTransitionsForLatin
+  {\begingroup\rmfamilylatin}
+  {\endgroup}
+
+%Uncomment this for Overleaf
+%\setmainfont[
+%  BoldFont={THSarabunNew Bold.ttf},
+%  ItalicFont={THSarabunNew Italic.ttf},
+%  BoldItalicFont={THSarabunNew BoldItalic.ttf},
+%]{THSarabunNew.ttf}
+
+%Thai names for environments defined in class
+\addto\captionsthai{%
+  \renewcommand{\figurename}{รูปที่}%
+  \renewcommand{\bibname}{เอกสารอ้างอิง}
+  \renewcommand*{\proofname}{บทพิสูจน์}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%
+%% Parameters
+%% Most are self-explanatory. 
+%%%%%%%%%%%%%%%%%%%%%%%
+
+\academicyear{2563}
+
+%Project title
+\title{จัตุรัสวิเศษในสมัยกรุงศรีอยุธยา}
+\engtitle{Magic Squares in the Ayutthaya Era}
+
+%Students (up to 4)
+\numberofmembers{3}
+
+\nameone{เฮอร์ไมโอนี}
+\lastnameone{เกรนเจอร์}
+\idone{6X102010XX1}
+
+\nametwo{แฮรรี่}
+\lastnametwo{พอตเตอร์}
+\idtwo{6X102010XX2}
+
+\namethree{รอน}
+\lastnamethree{วีสลีย์}
+\idthree{6X102010XX3}
+
+%\namefour{Ron}
+%\lastnamefour{Weasley}
+%\idfour{6X102010XX3}
+
+%Do not include Ph.D. for advisor or co-advisor
+\advisor{ศาสตราจารย์ ดร.อัลบัส ดัมเบิลดอร์}
+%\coadvisor{YYYY}
+
+%Committee
+\numberofexaminers{3}
+
+%Uncomment as you need
+%\examone{Examiner 1}
+%\examtwo{Examiner 2}
+%\examthree{Examiner 3}
+%\examfour{Examiner 3}
+
+%%%%%%%%%%%%%%%%%%%%%%%
+%% Your document starts here
+%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+%%% Front Matter
+\frontmatter
+
+\maketitle	
+\makeapprovalpage
+	
+\begin{abstract}
+วิธีสยาม หรือวิธีเดอ ลา ลูแบร์ เป็นวิธีการง่าย ๆ ในการสร้างจัตุรัสกล (จัตุรัสตัวเลขซึ่งผลรวมของทุกแถว คอลัมน์ และทแยงมุมมีค่าเท่ากัน) ที่มีความกว้างและยาวเป็นจำนวนคี่ใด ๆ วิธีการดังกล่าวถูกนำสู่ฝรั่งเศสในปี ค.ศ. 1688 โดยนักคณิตศาสตร์และทูตชาวฝรั่งเศส ซีมง เดอ ลา ลูแบร์ เมื่อเขาเดินทางกลับประเทศหลังการเดินทางมาเป็นคณะทูตที่ราชอาณาจักรสยามเมื่อปี ค.ศ. 1687 วิธีสยามทำให้การสร้างจัตุรัสกลเป็นไปอย่างตรงไปตรงมา
+\end{abstract}
+
+%\begin{acknowledgment}
+%	Thanks.
+%\end{acknowledgment}
+
+\tableofcontents
+
+%%% Main Matter
+\mainmatter
+
+\chapter{อารัมภบท}
+ในวิชาคณิตศาสตร์ \emph{ทฤษฎีบทพีทาโกรัส} Pythagorean Theorem แสดงความสัมพันธ์ในเรขาคณิตแบบยุคลิด ระหว่างด้านทั้งสามของสามเหลี่ยมมุมฉาก กำลังสองของด้านตรงข้ามมุมฉากเท่ากับผลรวมของกำลังสองของอีกสองด้านที่เหลือ ในแง่ของพื้นที่ กล่าวไว้ดังนี้
+\begin{equation}
+a^2+b^2=c^2
+\end{equation}
+
+พอลิเมอร์ สุริยจักรวาลโพลาไรซ์ กำทอนฟลูออไรด์อะมิโนแคสสินี คอปเปอร์พัลซาร์คอนดักเตอร์ ไทฟอยด์ฟิวชัน อีโบล่าฟอสซิลธันวาคมกำทอน ฟิชชันไดออกไซด์ซิริอุส เอสเตอร์อะมิโนโพลีเอทิลีนเซ็กเมนต์ไททัน โพลิเมอร์ไทรอยด์โวลต์อะมิโนอีโบลา มอนอกไซด์ซิลิกา สเกลาร์แกนีมีด ฟีโรโมนอีโบล่าเทอร์โมเซมิโอเซลทามิเวียร์ ฟลูออไรด์วีก้า โครมาโทกราฟี อะซีติกซิงค์ซิงค์แอมโมเนียมฮับเบิล ฮิวมัสกุมภาพันธ์แคโรทีนแทนนิน
+
+ซิลิกาอินทิกรัลเวสิเคิลแอลกอฮอลิซึม ออโรร่าฮิวมัสไททัน ฟลาโวนอยด์ไททัน เมทริกซ์เวก้า ไดนามิกแอสพาร์แตมสเปิร์ม จุลชีววิทยากำทอนเซ็กเตอร์ แคโรทีนพาราโบลาเวก้าไฮโดรลิก ดอปเปลอร์ฟลาโวนอยด์ ฟิชชันพันธุศาสตร์ซัลเฟตเคอราติน ซิลิกา พันธุศาสตร์ฟิชชัน ปฏิยานุพันธ์อะซีติกออโรราไทฟอยด์ซิลิกา ไพรเมต สเปิร์มแคโรทีนอัลคาไลน์มกราคมไททัน มกราคมคูลอมบ์พฤษภาคมกำทอนไฮเพอร์โบลา เพอร์ออกไซด์สเกลาร์เมทริกซ์
+
+\chapter{ความรู้พื้นฐาน}
+ในบทนี้เราจะพูดถึงนิยามและทฤษฎีบทที่จำเป็น
+ 
+\section{นิยามพื้นฐาน} 
+
+\begin{definition}
+\emph{อินทิกรัลสามชั้น} (triple integral) ของ $f$ บนกล่องสี่เหลี่ยมมุมฉาก $B$ คือ
+\[ \iiint_B f(x,y,z) \, dV = \lim_{L, M, N \to \infty} \sum_{i = 1}^L \sum_{j = 1}^M \sum_{k = 1}^N f(x_{ijk}^*, y_{ijk}^*, z_{ijk}^*) \Delta V \]
+เมื่อลิมิตหาค่าได้
+\end{definition}
+ 
+\section{ทฤษฎีบทที่จำเป็น}
+
+ระนองพะเยาชัยนาท อุดรธานีระนอง บางกอกบางกอก ลพบุรีโคตรบองมุกดาหารเพชรบุรี ลันตา รัตนาธิเบศร์มหาสารคาม สมุทรปราการทวาราวดีหนองบัวลำภูเลยสมุย ปายสุพรรณบุรีสกลนคร ขอนแก่นประจวบคีรีขันธ์ล้านนาสุพรรณบุรี ตรังสมุทรปราการจันทบุรีสิงห์บุรีชุมพร ตากล้านช้างทวาราวดีสุราษฎร์ธานี ปราจีนบุรีปายนครพนมมุกดาหารสุรินทร์ จตุจักรนครปฐม โคตรบองระนอง ดอนเมืองนครสวรรค์บางปะกง
+
+\begin{theorem}[ทฤษฎีบทของฟูบินี]
+ให้ $f$ เป็นฟังก์ชันต่อเนื่องบนสี่เหลี่ยม $R = [a,b] \times [c,d]$ จะได้ว่า
+\[ \iint_R f(x,y) dA = \int_a^b \int_c^d f(x,y) \, dy \, dx = \int_c^d \int_a^b f(x,y) \, dx \, dy \]
+\end{theorem}
+\begin{proof}
+เป็นการบ้านสำหรับผู้อ่าน
+\end{proof}
+
+\chapter{เลขวิทยุของกราฟวัฏจักร}
+
+\section{เลขวิทยุ}
+
+\begin{lemma}
+เล็มมา
+\end{lemma}
+
+\begin{proposition}[กฎของลิมิต]
+ให้ $f$ และ $g$ เป็นฟังก์ชันสองตัวแปรที่มีโดเมนคือ $D \subset \mathbb{R}^2$ 
+ให้ $(a,b)$ เป็นจุดภายในของ $D$ และให้ $k$ เป็นค่าคงที่ 
+
+ถ้า $\displaystyle \lim_{(x,y) \to (a,b)} f(x,y) = L$ และ 
+$\displaystyle \lim_{(x,y) \to (a,b)} g(x,y) = M$ จะได้ว่า
+\begin{enumerate}
+\item $\lim_{(x,y) \to (a,b)} x = a$ และ $\lim_{(x,y) \to (a,b)} y = b$
+\item $\lim_{(x,y) \to (a,b)} k = k$
+\item $\lim_{(x,y) \to (a,b)} f(x,y) + g(x,y) = L + M$
+\item $\lim_{(x,y) \to (a,b)} f(x,y)g(x,y) = LM$
+\item $\lim_{(x,y) \to (a,b)} \dfrac{f(x,y)}{g(x,y)} = \dfrac{L}{M}$ เมื่อ $M \neq 0$
+\item $\lim_{(x,y) \to (a,b)} |f(x,y)| = |L|$
+\item $\lim_{(x,y) \to (a,b)} (f(x,y))^k = L^k$ เมื่อ $L^k$ มีความหมาย 
+\end{enumerate}
+\end{proposition}
+\begin{proof}
+	เป็นการบ้านของผู้อ่าน
+\end{proof}
+
+%%%%%%%%%%%%%%%%%%%%%%
+%% APPENDIX
+%%%%%%%%%%%%%%%%%%%%%%
+
+\appendix
+%Change appendix counter to Thai alphabet
+\renewcommand{\thechapter}{\thaiAlph{chapter}} 
+
+\chapter{แบบฝึกหัดสำหรับผู้อ่าน}
+
+\begin{itemize}
+\item สระน้ำโบราณสระหนึ่งเป็นรูปสี่เหลี่ยมผืนผ้ากว้าง 15 เมตร ยาว 25 เมตร นักโบราณคดีวัดความสูงของน้ำในสระทุก ๆ 5 เมตร โดยเริ่มจากมุมหนึ่งของบ่อ ตารางข้างล่างแสดงความสูงของน้ำในสระที่วัดได้ในแต่ละจุด จงหาค่าประมาณของปริมาตรของน้ำในสระ
+
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|c|}
+\hline
+& 0 & 5 & 10 & 15 & 20 & 25 \\ \hline
+0 & 2 & 3 & 5 & 6 & 8 & 7 \\ \hline
+5 & 2 & 3 & 5 & 8 & 8 & 7 \\ \hline
+10 & 2 & 3 & 7 & 9 & 10 & 8 \\ \hline
+15 & 3 & 2 & 5 & 8 & 8 & 6 \\ \hline
+20 & 2 & 2 & 5 & 6 & 8 & 6 \\ \hline
+\end{tabular}
+\end{center}
+
+\item จงหาค่าของอินทิกรัลต่อไปนี้โดยมองว่าเป็นปริมาตรของทรงตัน
+\begin{enumerate}
+\item $\displaystyle \iint_R \sqrt{3} \, dA$ เมื่อ $R = \{(x,y) : 1 \leq x \leq 5, -1 \leq y \leq 4\}$
+\item $\displaystyle \iint_R 2x+1 \, dA$ เมื่อ $R = \{(x,y) : 0 \leq x \leq 2, 0 \leq y \leq 4\}$
+\end{enumerate}
+
+\item จงหาค่าของอินทิกรัลต่อไปนี้
+\begin{enumerate}
+\item $\displaystyle \int_0^1 \int_1^2 (4x^3 - 9x^2y^2) \, dy \, dx$
+\item $\displaystyle\int_0^1 \int_0^3 e^{x+3y} \, dx \, dy$
+\item $\displaystyle\int_0^1 \int_0^1 \dfrac{x}{1+xy} \, dx \, dy$
+\end{enumerate}
+
+\end{itemize}
+
+\newpage
+
+\begin{thebibliography}{20}
+	
+\bibitem{davis} B. Davis, D. Maclagan, The card game SET, \emph{Math. Intelligencer}, 25 no. 3 (2003), 33-40, http://dx.doi.org/10.1007/bf02984846.
+\bibitem{goldberg} T. Goldberg. Algebra From Geometry in the Card Game SET. \emph{The College Mathematics Journal}, 47 no.4 (2016), 265-273.
+\bibitem{gordon} H. Gordon, R. Gordon, E. McMahon, Hands-on SET, \emph{PRIMUS}, 23 (2013) 646-658.  
+\bibitem{lang} S. Lang, \emph{Linear Algebra Third Edition}. New haven, USA, 1987.
+	
+\end{thebibliography}
+
+\end{document}
