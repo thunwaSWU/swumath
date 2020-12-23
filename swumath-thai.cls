@@ -27,7 +27,7 @@
 \ProcessOptions\relax
 
 % Now load the report class
-\LoadClass[a4paper,12pt]{swumath}[2020/12/05]
+\LoadClass[a4paper,12pt]{swumath}[2020/12/23]
 
 %    ****************************************
 %    *               LOCALIZATION                *
