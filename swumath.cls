@@ -15,7 +15,7 @@
 
 \NeedsTeXFormat{LaTeX2e}[2020/02/02]
 \ProvidesClass{swumath}
-[2020/12/04 v0.9 Srinakharinwirot University, Department of Mathematics, Thesis Class]
+[2020/12/23 v1.0 Srinakharinwirot University, Department of Mathematics, Thesis Class]
 
 %    ****************************************
 %    *               OPTIONS                *
@@ -126,7 +126,7 @@
 %    ****************************************
 
 \RequirePackage{graphicx}
-\RequirePackage[figurewithin=none,justification=centering]{caption}
+\RequirePackage[figurewithin=chapter, tablewithin=chapter, justification=centering]{caption}
 
 %%%%%%%%%%%%%%%%%%%%%%%
 %enumitem style

@@ -15,7 +15,7 @@
 
 \NeedsTeXFormat{LaTeX2e}[2020/02/02]
 \ProvidesClass{swumath-thai}
-[2020/12/04 v0.9 Srinakharinwirot University, Department of Mathematics, Thesis Class]
+[2020/12/23 v1.0 Srinakharinwirot University, Department of Mathematics, Thesis Class]
 
 % All options are passed on to swumath
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{swumath}}
