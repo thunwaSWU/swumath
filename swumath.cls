@@ -1,13 +1,27 @@
 %% ====================================================================
 %% swumath.cls 
-%% Last modified : 2020-12-04
+%% Last modified : 2021-01-28
 %% Copyright (C) 2020- Thunwa Theerakarn
-%
-%
-% The current maintainer of this work is Thunwa Theerakarn.
-%
-% This work consists of the files swumath.cls 
-%
+%% Permission is hereby granted, free of charge, to any person obtaining a copy of this software 
+%% and associated documentation files (the "Software"),to deal in the Software without restriction, 
+%% including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, 
+%% and/or sell copies of the Software, and to permit persons to whom the Software is furnished to 
+%% do so, subject to the following conditions:
+%%
+%% The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+%%
+%% THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, 
+%% EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF 
+%% MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. 
+%% IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY 
+%% CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, 
+%% TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE 
+%% SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+%%
+%% The current maintainer of this work is Thunwa Theerakarn.
+%%
+%% This work consists of the files swumath.cls 
+%%
 %% ====================================================================
 %
 % This file is a modification of 'chula.cls' by Wicharn Lewkeeratiyutkul and Mark E. Hall 
@@ -15,7 +29,7 @@
 
 \NeedsTeXFormat{LaTeX2e}[2020/02/02]
 \ProvidesClass{swumath}
-[2020/12/23 v1.0 Srinakharinwirot University, Department of Mathematics, Thesis Class]
+[2021/01/28 v1.01 Srinakharinwirot University, Department of Mathematics, Thesis Class]
 
 %    ****************************************
 %    *               OPTIONS                *
@@ -567,6 +581,8 @@ Accepted by the Department of Mathematics, Faculty of Science,
   \clearpage}
 
 \renewcommand{\contentsname}{CONTENTS}
+\renewcommand{\listtablename}{LIST OF TABLES}
+\renewcommand{\listfigurename}{LIST OF FIGURES}
 \renewcommand{\l@figure}{\@dottedtocline{1}{2em}{2.5em}}
 \let\l@table\l@figure
 
@@ -616,10 +632,32 @@ Accepted by the Department of Mathematics, Faculty of Science,
 %    &\@prevdegreecity\@othervita\cr}%
 %  \clearpage}
 
+\renewcommand\listoftables{%
+  \global\@topnum\z@
+  \@makeschapterhead{\listtablename
+    \@mkboth{\listtablename}{\listtablename}}%
+  \@afterheading
+  \singlespacing
+  \@starttoc{lot}%
+  \normalspacing
+%  \clearpage
+  }
+  
+\renewcommand\listoffigures{%
+  \global\@topnum\z@
+  \@makeschapterhead{\listfigurename
+    \@mkboth{\listfigurename}{\listfigurename}}%
+  \@afterheading
+  \singlespacing
+  \@starttoc{lof}%
+  \normalspacing
+%  \clearpage
+  }
+
 %\newcommand{\tablelistpage}{%
 %  \singlespacing
 %  \label{lot}
-%%  \prelim@contents{\listtablename}
+%  \prelim@contents{\listtablename}
 %  \listoftables
 %  \normalspacing
 %  \clearpage
@@ -633,6 +671,7 @@ Accepted by the Department of Mathematics, Faculty of Science,
 %  \normalspacing
 %  \clearpage
 %}
+
 %\newcommand{\abbrlist}{%
 %  \singlespacing
 %  \prelim@contents{List of Abbreviations}
