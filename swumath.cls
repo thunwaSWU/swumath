@@ -27,9 +27,19 @@
 % This file is a modification of 'chula.cls' by Wicharn Lewkeeratiyutkul and Mark E. Hall 
 % and 'ucbthesis.cls' by Daniel Gildea, BBF, Ethan Munson, and Paul Vojta.
 
+%============================
+%. Update Note
+%============================
+%
+% v1.02 
+% 	- Fix Upper cases in 'Acknowledgement'
+%	- Remove preloading 'caption' and use setlength instead       
+%
+%============================
+
 \NeedsTeXFormat{LaTeX2e}[2020/02/02]
 \ProvidesClass{swumath}
-[2021/01/28 v1.01 Srinakharinwirot University, Department of Mathematics, Thesis Class]
+[2021/02/27 v1.02 Srinakharinwirot University, Department of Mathematics, Thesis Class]
 
 %    ****************************************
 %    *               OPTIONS                *
@@ -77,12 +87,18 @@
 % Now load the report class
 \LoadClass[a4paper,12pt]{report}[1994/06/01]
 
+% ****************************************
+%  Geometry
+% ****************************************
+
 \RequirePackage[margin=1in]{geometry}
 
 %Double Space
 \linespread{1.6}
 \setlength{\parindent}{0.5in}
 \setlength{\parskip}{1em}
+
+\setlength{\abovecaptionskip}{6pt plus 2pt minus 3pt}
 
 % Change the chapter head commands so that the chapter head is
 % centered and the chapter number is printed in capital Roman
@@ -140,7 +156,7 @@
 %    ****************************************
 
 \RequirePackage{graphicx}
-\RequirePackage[figurewithin=chapter, tablewithin=chapter, justification=centering]{caption}
+%\RequirePackage[figurewithin=chapter, tablewithin=chapter, justification=centering]{caption}
 
 %%%%%%%%%%%%%%%%%%%%%%%
 %enumitem style
@@ -387,7 +403,7 @@ Accepted by the Department of Mathematics, Faculty of Science,
 \newcommand{\@examinertext}{Examiner}
 \newcommand{\@committeetext}{Committee}
 \newcommand{\@abstracttext}{Abstract}
-\newcommand{\@acknowledgementtext}{ACKNOWLEDGMENT}
+\newcommand{\@acknowledgementtext}{Acknowledgement}
 
 % TITLE PAGE
 \renewcommand{\maketitle}{%
@@ -580,9 +596,9 @@ Accepted by the Department of Mathematics, Faculty of Science,
 }{%
   \clearpage}
 
-\renewcommand{\contentsname}{CONTENTS}
-\renewcommand{\listtablename}{LIST OF TABLES}
-\renewcommand{\listfigurename}{LIST OF FIGURES}
+\renewcommand{\contentsname}{Contents}
+\renewcommand{\listtablename}{List of Tables}
+\renewcommand{\listfigurename}{List of Figures}
 \renewcommand{\l@figure}{\@dottedtocline{1}{2em}{2.5em}}
 \let\l@table\l@figure
 
