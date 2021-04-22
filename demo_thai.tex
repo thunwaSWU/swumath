@@ -18,11 +18,12 @@
 %% SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 %%
 %%
-%% You must have swumath.cls, swumath-thai.cls, and Srinakharinwirot_Logo_TH_Color.png in the same folder.
+%% You must have swumath.cls, swumath-thai.cls, and Srinakharinwirot_Logo_TH_Color.png, 
+%% and all 4 TH Sarabun New font files in the same folder.
 %%
 %% Options for swumath class : ma491, ma493, st472, or st474
 %%
-%% Preloaded Packages : geometry, graphicx, caption, enumitem
+%% Preloaded Packages : geometry, graphicx, enumitem
 %%                                     amssymb, amsmath, amsthm
 %% For basic usage, you do not need to load any other packages or redefine anything.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -34,7 +35,6 @@
 %%
 %% 1. MUST COMPILE WITH XeLaTeX
 %% 2. USE UTF-8 for source
-%% 3. MUST have TH Sarabun New installed on your computer.
 %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -44,9 +44,6 @@
 % SETUP FOR THAI LANGUAGE
 %%%%%%%%%%%%%%%%%%%%%%%
 
-%% Polyglossia
-\usepackage{polyglossia}
-
 \usepackage{fontspec}
 \usepackage{xltxtra}
 \usepackage{xunicode}
@@ -55,15 +52,27 @@
 \usepackage{fonts-tlwg}
 \defaultfontfeatures{Mapping=tex-text} 
 
-%Comment this for Overleaf
-\newfontfamily{\thaifont}{THSarabunNew}[Scale = 1.3]
-\setmainlanguage{thai}
+%\newfontfamily{\thaifont}{THSarabunNew}[Scale = 1.3]
+
+\newfontfamily{\thaifont}{THSarabunNew.ttf}[
+	Path, 
+	BoldFont 	= THSarabunNew Bold.ttf,
+       	ItalicFont  = THSarabunNew Italic.ttf,
+       	BoldItalicFont = THSarabunNew BoldItalic.ttf,
+	Script = Thai,
+	Scale = 1.3]
 
 %% Ucharclasses Package is responsible for auto-switching font based on Unicode
 \usepackage[Latin,Thai]{ucharclasses}
 \setTransitionsForLatin
   {\begingroup\rmfamilylatin}
   {\endgroup}
+  
+%% Polyglossia
+\usepackage{polyglossia}
+\setmainlanguage{thai}
+
+%\usepackage[thai,english]{babel}
 
 %Uncomment this for Overleaf
 %\setmainfont[
@@ -74,7 +83,7 @@
 
 %Thai names for environments defined in class
 \addto\captionsthai{%
-  \renewcommand{\figurename}{รูปที่}%
+  \renewcommand{\figurename}{รูป}%
   \renewcommand{\bibname}{เอกสารอ้างอิง}
   \renewcommand*{\proofname}{บทพิสูจน์}
   \renewcommand{\listfigurename}{สารบัญภาพ}
@@ -264,6 +273,9 @@ $\displaystyle \lim_{(x,y) \to (a,b)} g(x,y) = M$ จะได้ว่า
 \end{itemize}
 
 \newpage
+
+%You can use the following line to manually set page number.
+%\setcounter{page}{20}
 
 \begin{thebibliography}{99}
 	
