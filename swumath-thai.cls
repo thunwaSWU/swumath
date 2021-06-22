@@ -1,6 +1,6 @@
 %% ====================================================================
 %% swumath_thai.cls 
-%% Last modified : 2021-01-28
+%% Last modified : 2021-06-22
 %% Copyright (C) 2020- Thunwa Theerakarn
 %% Permission is hereby granted, free of charge, to any person obtaining a copy of this software 
 %% and associated documentation files (the "Software"),to deal in the Software without restriction, 
@@ -30,7 +30,7 @@
 
 \NeedsTeXFormat{LaTeX2e}[2020/02/02]
 \ProvidesClass{swumath-thai}
-[2021/01/28 v1.01 Srinakharinwirot University, Department of Mathematics, Thesis Class]
+[2021/06/22 v1.03 Srinakharinwirot University, Department of Mathematics, Thesis Class]
 
 % All options are passed on to swumath
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{swumath}}
@@ -247,7 +247,7 @@
   \noindent
      \begin{tabular}{@{}p{0.25\linewidth}@{\hspace{0.5em}}r@{\hspace{0.5em}}p{0.7\linewidth}}
      \@seminartitletext&: &\@title\cr
-     \@researcharticletext&:&Reserach ArticleReserach ArticleReserach ArticleReserach ArticleReserach ArticleReserach ArticleReserach ArticleReserach ArticleReserach \cr
+     \@researcharticletext&:&\@researcharticle\cr
      \@presentedbytext&: &\@nameone\hskip 0.3em \@lastnameone\cr
      \ifnum\@numberofmembers>1%
     &&\@nametwo\hskip 0.3em \@lastnametwo\cr 

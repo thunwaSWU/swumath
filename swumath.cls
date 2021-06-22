@@ -1,6 +1,6 @@
 %% ====================================================================
 %% swumath.cls 
-%% Last modified : 2021-01-28
+%% Last modified : 2021-06-22
 %% Copyright (C) 2020- Thunwa Theerakarn
 %% Permission is hereby granted, free of charge, to any person obtaining a copy of this software 
 %% and associated documentation files (the "Software"),to deal in the Software without restriction, 
@@ -33,13 +33,15 @@
 %
 % v1.02 
 % 	- Fix Upper cases in 'Acknowledgement'
-%	- Remove preloading 'caption' and use setlength instead       
+%	- Remove preloading 'caption' and use setlength instead  
+% v1.03
+%.    - Add missing command for 'Research Article' in the approval page    
 %
 %============================
 
 \NeedsTeXFormat{LaTeX2e}[2020/02/02]
 \ProvidesClass{swumath}
-[2021/02/27 v1.02 Srinakharinwirot University, Department of Mathematics, Thesis Class]
+[2021/06/22 v1.03 Srinakharinwirot University, Department of Mathematics, Thesis Class]
 
 %    ****************************************
 %    *               OPTIONS                *
@@ -328,6 +330,10 @@
 \newcommand{\@programchair}{Assistant Professor Pisuttawan Sripirom Sirininlakul, Ph.D.}
 \newcommand{\programchair}[1]{\renewcommand{\@programchair}{#1}}
 
+%Article
+\newcommand{\@researcharticle}{Research Article}
+\newcommand{\researcharticle}[1]{\renewcommand{\@researcharticle}{#1}}
+
 %%%%%%%%
 
 \newcommand{\titlesize}[1]{\renewcommand{\@titlesize}{#1}}
@@ -503,7 +509,7 @@ Accepted by the Department of Mathematics, Faculty of Science,
   \noindent
      \begin{tabular}{@{}p{0.25\linewidth}@{\hspace{0.5em}}r@{\hspace{0.5em}}p{0.7\linewidth}}
      \@seminartitletext&: &\@title\cr
-     \@researcharticletext&:&Reserach ArticleReserach ArticleReserach ArticleReserach ArticleReserach ArticleReserach ArticleReserach ArticleReserach ArticleReserach \cr
+     \@researcharticletext&:&\@researcharticle \cr
      \@presentedbytext&: &\@nameone\hskip 0.3em \@lastnameone\cr
      \ifnum\@numberofmembers>1%
     &&\@nametwo\hskip 0.3em \@lastnametwo\cr 
