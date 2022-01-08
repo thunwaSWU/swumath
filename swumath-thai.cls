@@ -30,7 +30,7 @@
 
 \NeedsTeXFormat{LaTeX2e}[2020/02/02]
 \ProvidesClass{swumath-thai}
-[2021/06/22 v1.03 Srinakharinwirot University, Department of Mathematics, Thesis Class]
+[2022/01/08 v1.04 Srinakharinwirot University, Department of Mathematics, Thesis Class]
 
 % All options are passed on to swumath
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{swumath}}
@@ -62,7 +62,7 @@
 \renewcommand{\@coadvisortext}{อาจารย์ที่ปรึกษาร่วม}
 \renewcommand{\@seminarcoadvisortext}{อาจารย์ที่ปรึกษาร่วม}
 \renewcommand{\@submittitle}{%
-	รายงานนี้เป็นส่วนหนึ่งของการศึกษาตามหลักสูตรปริญญาวิทยาศาสตร์บัณฑิต\\
+	รายงานนี้เป็นส่วนหนึ่งของการศึกษาตามหลักสูตรปริญญาวิทยาศาสตรบัณฑิต\\
 	    \ifnum\@subject<2%
     สาขาวิชาคณิตศาสตร์ 
     \else
@@ -75,9 +75,9 @@
 \renewcommand{\@swulogo}{Srinakharinwirot_Logo_TH_Color.png}
 \renewcommand{\@subjectname}{%
 \ifnum\@subject=0%
-    คณ 491 สัมมนาคณิตศาสตร์
+    คณ 491 สัมมนาคณิตศาสตร์ 2
     \else\fi \ifnum\@subject=1%
-    คณ 493 โครงงานคณิตศาสตร์
+    คณ 493 โครงงานคณิตศาสตร์ 2
     \else\fi \ifnum\@subject=2%
     สถ 472 สัมมนาทางด้านสถิติ 
     \else\fi  \ifnum\@subject=3%
@@ -100,6 +100,8 @@
 %%%%%%%%%
 %   AMSTHM
 %%%%%%%%%
+
+%So that we can redefine theorem name (source: https://tex.stackexchange.com/questions/103013/is-there-a-renewtheorem-equivalent-of-renewcommand-using-amsthm-and-not-ntheo )
 \def\renewtheorem#1{%
   \expandafter\let\csname#1\endcsname\relax
   \expandafter\let\csname c@#1\endcsname\relax
@@ -115,6 +117,13 @@
 }
 \def\renewtheorem@thirdpar{\@ifnextchar[{\renewtheorem@within}{\renewtheorem@nowithin}}
 \def\renewtheorem@within[#1]{\renewtheorem@nowithin[#1]}
+
+%Remove period after "proof"
+\let\@addpunct\@gobble
+
+%Remove period after "theorem" and friends
+\usepackage{xpatch}
+\xpatchcmd{\@thm}{\thm@headpunct{.}}{\thm@headpunct{}}{}{}
 
 %\theoremstyle{plain}
 \renewtheorem{theorem}{ทฤษฎีบท}[section]
